@@ -1,0 +1,13 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=aea44c8f_002D814f_002D4030_002Db50d_002De5a491c80cff/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ChatRepositoryTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::BDFFF46A-EA64-4BAE-82F5-631EACD8FFFF::net6.0::TestTask.Tests.ChatRepositoryTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e7a069f0_002Db7e7_002D4cf1_002Da042_002D002dad6c5d03/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ChatRepositoryTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::BDFFF46A-EA64-4BAE-82F5-631EACD8FFFF::net6.0::TestTask.Tests.ChatRepositoryTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::BDFFF46A-EA64-4BAE-82F5-631EACD8FFFF::net6.0::TestTask.Tests.UserRepositoryTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::BDFFF46A-EA64-4BAE-82F5-631EACD8FFFF::net6.0::TestApplication.IntegrationTests.UserControllerIntegrationTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

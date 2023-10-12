@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestTask</name>
+    </assembly>
+    <members>
+        <member name="M:TestTask.Controllers.ChatController.CreateChat(CreateChatRequest)">
+             <summary>
+             Create a new chat.
+             </summary>
+             <param name="request">Chat creation request.</param>
+             <remarks>
+             Sample request:
+            
+                 POST /api/chats/create
+                 {
+                     "CreatorId": "your-creator-id-here",
+                     "ChatName": "New Chat"
+                 }
+            
+             </remarks>
+             <returns>The result of chat creation.</returns>
+             <response code="200">Chat created successfully.</response>
+             <response code="409">Chat name is not unique (InvalidOperationException) or Creator not found (EntityNotFoundException).</response>
+             <response code="500">An error occurred while creating the chat.</response>
+        </member>
+        <member name="M:TestTask.Controllers.ChatController.RenameChat(RenameChatRequest)">
+             <summary>
+             Rename an existing chat.
+             </summary>
+             <param name="request">Chat renaming request.</param>
+             <remarks>
+             Sample request:
+            
+                 PUT /api/chats/rename
+                 {
+                     "UserId": "your-user-id-here",
+                     "ChatId": "your-chat-id-here",
+                     "NewName": "Updated Chat Name"
+                 }
+            
+             </remarks>
+             <returns>The result of chat renaming.</returns>
+             <response code="200">Chat renamed successfully.</response>
+             <response code="500">An error occurred while renaming the chat.</response>
+        </member>
+        <member name="M:TestTask.Controllers.ChatController.AddUserToChat(AddUserToChat)">
+             <summary>
+             Add a user to an existing chat.
+             </summary>
+             <param name="request">Request to add a user to a chat.</param>
+             <remarks>
+             Sample request:
+            
+                 POST /api/chats/addUserToChat
+                 {
+                     "UserId": "your-user-id-here",
+                     "ChatId": "your-chat-id-here"
+                 }
+            
+             </remarks>
+             <returns>The result of adding a user to the chat.</returns>
+             <response code="200">User added to the chat successfully.</response>
+             <response code="409">User or Chat not found (EntityNotFoundException).</response>
+             <response code="500">An error occurred while adding the user to the chat.</response>
+        </member>
+        <member name="M:TestTask.Controllers.ChatController.GetChats">
+             <summary>
+             Retrieve a list of chats.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET /api/chats/getChats
+            
+             </remarks>
+             <returns>A list of all chats in the system.</returns>
+             <response code="200">The list of chats was successfully retrieved.</response>
+             <response code="404">No chats were found in the system.</response>
+             <response code="500">An error occurred while attempting to retrieve the list of chats.</response>
+        </member>
+        <member name="M:TestTask.Controllers.ChatController.GetChat(System.Guid)">
+             <summary>
+             Retrieve a chat by its ID.
+             </summary>
+             <param name="chatId">The ID of the chat to retrieve.</param>
+             <remarks>
+             Sample request:
+            
+                 GET /api/chats/getChat?chatId=your-chat-id-here
+            
+             </remarks>
+             <returns>The chat with the specified ID.</returns>
+             <response code="200">The chat was successfully retrieved.</response>
+             <response code="404">The specified chat was not found (EntityNotFoundException).</response>
+             <response code="500">An error occurred while attempting to retrieve the chat.</response>
+        </member>
+        <member name="M:TestTask.Controllers.ChatController.GetChatMembers(System.Guid)">
+             <summary>
+             Retrieve the members of a chat by its ID.
+             </summary>
+             <param name="chatId">The ID of the chat to retrieve members from.</param>
+             <remarks>
+             Sample request:
+            
+                 GET /api/chats/getChatMembers?chatId=your-chat-id-here
+            
+             </remarks>
+             <returns>The members of the chat with the specified ID.</returns>
+             <response code="200">The chat members were successfully retrieved.</response>
+             <response code="404">The specified chat was not found (EntityNotFoundException).</response>
+             <response code="500">An error occurred while attempting to retrieve the chat members.</response>
+        </member>
+        <member name="M:TestTask.Controllers.ChatController.GetChatMessages(System.Guid)">
+             <summary>
+             Retrieve messages from a chat by its ID.
+             </summary>
+             <param name="chatId">The ID of the chat to retrieve messages from.</param>
+             <remarks>
+             Sample request:
+            
+                 GET /api/chats/getChatMessages?chatId=your-chat-id-here
+            
+             </remarks>
+             <returns>The messages from the chat with the specified ID.</returns>
+             <response code="200">The chat messages were successfully retrieved.</response>
+             <response code="500">An error occurred while attempting to retrieve the chat messages.</response>
+        </member>
+        <member name="M:TestTask.Controllers.ChatController.DeleteChat(DeleteChatRequest)">
+             <summary>
+             Delete a chat.
+             </summary>
+             <param name="request">Request to delete a chat.</param>
+             <remarks>
+             Sample request:
+            
+                 DELETE /api/chats/delete
+                 {
+                     "UserId": "your-user-id-here",
+                     "ChatId": "your-chat-id-here"
+                 }
+            
+             </remarks>
+             <returns>The result of deleting the chat.</returns>
+             <response code="200">The chat was successfully deleted.</response>
+             <response code="403">The user does not have permission to delete the chat (AccessViolationException).</response>
+             <response code="404">The specified chat or user was not found (EntityNotFoundException).</response>
+             <response code="500">An error occurred while attempting to delete the chat.</response>
+        </member>
+        <member name="T:TestTask.Migrations.Initial">
+            <inheritdoc />
+        </member>
+        <member name="M:TestTask.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestTask.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestTask.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestApplication.Controllers.MessageController.Send(SendMessageRequest)">
+             <summary>
+             Send a message in a chat.
+             </summary>
+             <param name="request">Message sending request.</param>
+             <remarks>
+             Sample request:
+            
+                 POST /api/messages/sendMessage
+                 {
+                     "ChatId": "your-chat-id-here",
+                     "UserId": "your-user-id-here",
+                     "MessageText": "Hello, world!"
+                 }
+            
+             </remarks>
+             <returns>The result of the message sending operation.</returns>
+             <response code="200">Message sent successfully.</response>
+             <response code="409">Creator not found (EntityNotFoundException).</response>
+             <response code="500">An error occurred while sending the message.</response>
+        </member>
+        <member name="M:TestApplication.Controllers.UserController.CreateUser(CreateUserRequest)">
+             <summary>
+             Create a new user.
+             </summary>
+             <param name="request">The user creation request.</param>
+             <remarks>
+             Sample request:
+            
+                 POST /api/users/create
+                 {
+                     "UserName": "JohnDoe"
+                 }
+            
+             </remarks>
+             <returns>Result of user creation.</returns>
+             <response code="200">User created successfully.</response>
+             <response code="409">The provided username is not unique.</response>
+             <response code="500">An error occurred while attempting to create the user.</response>
+        </member>
+        <member name="M:TestApplication.Controllers.UserController.GetUser(System.Guid)">
+             <summary>
+             Get a user by their ID.
+             </summary>
+             <param name="id">The ID of the user to retrieve.</param>
+             <remarks>
+             Sample request:
+            
+                 GET /api/users/getUser?id=your-guid-here
+            
+             </remarks>
+             <returns>The user with the specified ID.</returns>
+             <response code="200">The user was successfully retrieved.</response>
+             <response code="404">The specified user was not found.</response>
+             <response code="500">An error occurred while attempting to retrieve the user.</response>
+        </member>
+        <member name="M:TestApplication.Controllers.UserController.GetUsers">
+             <summary>
+             Retrieve a list of users.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET /api/users/getUsers
+            
+             </remarks>
+             <returns>A list of all users in the system.</returns>
+             <response code="200">The list of users was successfully retrieved.</response>
+             <response code="404">No users were found in the system.</response>
+             <response code="500">An error occurred while attempting to retrieve the list of users.</response>
+        </member>
+        <member name="T:AddUserToChat">
+            <summary>
+            Request to add a user to a chat.
+            </summary>
+        </member>
+        <member name="P:AddUserToChat.UserId">
+            <summary>
+            Gets or sets the ID of the user to add to the chat.
+            </summary>
+        </member>
+        <member name="P:AddUserToChat.ChatId">
+            <summary>
+            Gets or sets the ID of the chat to which the user should be added.
+            </summary>
+        </member>
+        <member name="T:CreateChatRequest">
+            <summary>
+            Request to create a new chat.
+            </summary>
+        </member>
+        <member name="P:CreateChatRequest.CreatorId">
+            <summary>
+            Gets or sets the ID of the user who is creating the chat.
+            </summary>
+        </member>
+        <member name="P:CreateChatRequest.ChatName">
+            <summary>
+            Gets or sets the name of the chat.
+            </summary>
+        </member>
+        <member name="T:CreateUserRequest">
+            <summary>
+            Request to create a new user.
+            </summary>
+        </member>
+        <member name="P:CreateUserRequest.UserName">
+            <summary>
+            Gets or sets the username of the new user.
+            </summary>
+        </member>
+        <member name="T:DeleteChatRequest">
+            <summary>
+            Request to delete a chat.
+            </summary>
+        </member>
+        <member name="P:DeleteChatRequest.UserId">
+            <summary>
+            Gets or sets the ID of the user requesting the chat deletion.
+            </summary>
+        </member>
+        <member name="P:DeleteChatRequest.ChatId">
+            <summary>
+            Gets or sets the ID of the chat to be deleted.
+            </summary>
+        </member>
+        <member name="T:GetChatMembersResponse">
+            <summary>
+            Response containing the list of user IDs in a chat.
+            </summary>
+        </member>
+        <member name="P:GetChatMembersResponse.UserId">
+            <summary>
+            Gets or sets the ID of a user in the chat.
+            </summary>
+        </member>
+        <member name="T:GetChatMessagesResponse">
+            <summary>
+            Response containing chat messages.
+            </summary>
+        </member>
+        <member name="P:GetChatMessagesResponse.Id">
+            <summary>
+            Gets or sets the ID of the chat message.
+            </summary>
+        </member>
+        <member name="P:GetChatMessagesResponse.UserId">
+            <summary>
+            Gets or sets the ID of the user who sent the message.
+            </summary>
+        </member>
+        <member name="P:GetChatMessagesResponse.Text">
+            <summary>
+            Gets or sets the text of the chat message.
+            </summary>
+        </member>
+        <member name="P:GetChatMessagesResponse.Timestamp">
+            <summary>
+            Gets or sets the timestamp when the message was sent.
+            </summary>
+        </member>
+        <member name="T:GetChatsResponse">
+            <summary>
+            Response containing chat information.
+            </summary>
+        </member>
+        <member name="P:GetChatsResponse.ChatId">
+            <summary>
+            Gets or sets the ID of the chat.
+            </summary>
+        </member>
+        <member name="P:GetChatsResponse.CreatorId">
+            <summary>
+            Gets or sets the ID of the user who created the chat.
+            </summary>
+        </member>
+        <member name="P:GetChatsResponse.ChatName">
+            <summary>
+            Gets or sets the name of the chat.
+            </summary>
+        </member>
+        <member name="P:GetChatsResponse.AmountOfMembers">
+            <summary>
+            Gets or sets the number of members in the chat.
+            </summary>
+        </member>
+        <member name="T:RenameChatRequest">
+            <summary>
+            Request to rename a chat.
+            </summary>
+        </member>
+        <member name="P:RenameChatRequest.UserId">
+            <summary>
+            Gets or sets the ID of the user requesting the chat renaming.
+            </summary>
+        </member>
+        <member name="P:RenameChatRequest.ChatId">
+            <summary>
+            Gets or sets the ID of the chat to be renamed.
+            </summary>
+        </member>
+        <member name="P:RenameChatRequest.NewName">
+            <summary>
+            Gets or sets the new name for the chat.
+            </summary>
+        </member>
+        <member name="T:SendMessageRequest">
+            <summary>
+            Request to send a message in a chat.
+            </summary>
+        </member>
+        <member name="P:SendMessageRequest.ChatId">
+            <summary>
+            Gets or sets the ID of the chat where the message will be sent.
+            </summary>
+        </member>
+        <member name="P:SendMessageRequest.UserId">
+            <summary>
+            Gets or sets the ID of the user sending the message.
+            </summary>
+        </member>
+        <member name="P:SendMessageRequest.MessageText">
+            <summary>
+            Gets or sets the text of the message to be sent.
+            </summary>
+        </member>
+    </members>
+</doc>
