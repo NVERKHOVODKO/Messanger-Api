@@ -1,9 +1,4 @@
-﻿using System.Linq.Expressions;
-using Microsoft.EntityFrameworkCore;
-using TestApplication.Controllers;
-using TestApplication.Data;
-using TestApplication.Models;
-using TestTask.Repositories;
+﻿using TestApplication.Models;
 using TestTask.Repositories.Interfaces;
 
 namespace TestApplication.Services

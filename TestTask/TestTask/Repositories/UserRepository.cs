@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using TestApplication.Controllers;
+﻿using Microsoft.EntityFrameworkCore;
 using TestApplication.Data;
 using TestApplication.Models;
 using TestTask.Repositories.Interfaces;

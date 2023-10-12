@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using TestApplication.Controllers;
-using TestApplication.Models;
+﻿using TestApplication.Models;
 using TestTask.Controllers;
 using TestTask.Exceptions;
 using TestTask.Repositories.Interfaces;

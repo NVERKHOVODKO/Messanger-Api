@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LL2ElJRhL+UsGmV2eB+7hw+PT6+cOw44CISpBF6GT7Qs8q/AYb/bzvOBPDcjZsdiqbUXW60aFjDVGKZDU93LDw==",
+  "dgSpecHash": "L6ReQbevyb+NwgtpS4Fee2dtOqEVGXbPpsWoWHjSNeto8uttkrZY2b9/gwhT8UNUCR3/W/YW1i9w8yigPh1e0A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\Messenger API\\TestTask\\TestTaskTests\\TestTaskTests.csproj",
+  "projectFilePath": "C:\\НЕ СИСТЕМА\\BSUIR\\Messanger-Api\\TestTask\\TestTaskTests\\TestTaskTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",

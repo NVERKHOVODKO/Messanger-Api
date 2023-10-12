@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n1279gdnb77mxxBxxcgjfQ8UI/rnHFs71lw+2jeaZsfPuOrFzRdE4pljLosE1JhTQvdQLeT1AFkufk8l7KLqZA==",
+  "dgSpecHash": "CO/i4YwO+zbKzAADb8WNeVGGqfTDGFdaEqlCrRhZzLRyagDKE0e6uZTbrZiSxLvQ+q3UrViFWTIEmuTVUrRjzw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\Messenger API\\TestTask\\TestTask\\TestTask.csproj",
+  "projectFilePath": "C:\\НЕ СИСТЕМА\\BSUIR\\Messanger-Api\\TestTask\\TestTask\\TestTask.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
